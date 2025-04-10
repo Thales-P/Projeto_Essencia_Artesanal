@@ -128,3 +128,144 @@ button {
   color: #7b7b7b;
   text-decoration: none;
 }
+
+#area_menu {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  border: 1px solid #6a9266;
+  background-color: #f5f5f5;
+}
+
+
+.back-link {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.back_icon {
+  height: 30px;
+}
+
+
+
+#area_menu a:link, #area_menu a:visited{
+  color: rgb(0, 0, 0);
+  padding: 8px 12px;
+  text-decoration: none;
+  letter-spacing: 5px;
+}
+
+
+/* area da material */
+#container_materia{
+width: 75%;
+margin: 0 auto;
+margin-top: 50px;
+}
+
+#container_materia h1{
+  font-size: 2em;
+  color: black;
+  text-align: center;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+#container_materia p{
+  color: black;
+  margin-top: 50px;
+  max-width: 920px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+#img_materia{
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+/* area do veja tambem */
+
+.veja-tambem {
+  width: 80%;
+  margin: 50px auto;
+}
+
+.veja-tambem h2 {
+  text-align: center;
+  color: #6a9266;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.grid article {
+  background-color: #f6f6f6;
+  border: 2px solid #6a9266;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.grid article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.grid article img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.grid article h3 {
+  color: #6a9266;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.grid article p {
+  color: #333;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.grid article a {
+  display: inline-block;
+  background-color: #6a9266;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.grid article a:hover {
+  background-color: #5a7f58;
+}
+
+
+footer{
+  background-color: #738d6d;
+  padding: 40px 0 30px;
+  text-align: center;
+}
