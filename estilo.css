@@ -6,6 +6,10 @@
 
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: #fff;
 }
@@ -335,14 +339,14 @@ footer{
   flex-wrap: wrap;
 }
 
-.card{
+.card-produto{
   width: 30%;
   margin-bottom: 60px;
   cursor: pointer;
   transition: transform 0.4s ease;
 }
 
-.card:hover {
+.card-produto:hover {
   transform: scale(1.05); 
 }
 
@@ -362,4 +366,127 @@ footer{
   color: #AEAEAE;
   width: 40%;
   font-size: small;
+}
+
+.noticia-conteudo{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-noticia{
+  width: 25em;
+}
+
+.card-noticia img{
+  height: 15em;
+  width: 100%;
+}
+
+.titulo-noticia{
+  color:#333;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.footer-noticias{
+  margin: 4em 0em;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+  color:#333;
+  padding: 0em 5em ;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.footer-noticias i{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.footer-noticias span{
+  cursor: pointer;
+}
+
+#contato{
+  margin: auto;
+  margin-bottom: 3em;
+  border-radius: 5px;
+  width: 95%;
+  background-color: #F0E5D8;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 2em;
+}
+
+#contato h2{
+  color: #4B7F52;
+  font-weight:bold;
+  font-size: 48px;
+}
+
+.conteudo-contato{
+  width: 95%;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+
+.conteudo-contato a{
+  width: 302px;
+}
+
+.conteudo-contato p{
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.campos{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.campo{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: black;
+}
+
+.campo label{
+  font-weight: 500;
+}
+
+.campo input{
+  border: none;
+  height: 2.2em;
+  padding: 0 1em ;
+  border-radius: 10px;
+}
+
+.campo textarea{
+  border: none;
+  padding: .2em 1em ;
+  border-radius: 10px;
+  resize: none;
+}
+
+.btn_area{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn_enviar{
+  background-color: #758E67;
+  border-radius: 15px;
+  width: 12em;
 }

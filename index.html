@@ -7,7 +7,8 @@
     <title>Essência Artesanal - Login</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="estilo.css" />
 </head>
 
@@ -20,9 +21,9 @@
     </header>
     <div id="area_menu">
         <nav class="nav_links">
-          <a href="">PRODUTOS</a>
-          <a href="">BLOG</a>
-          <a href="">CONTATO</a>
+          <a href="#produtos">PRODUTOS</a>
+          <a href="#noticias">BLOG</a>
+          <a href="#contato">CONTATO</a>
         </nav>
         
         <a href="" class="bag-link">
@@ -128,11 +129,60 @@
             <h2>Noticias</h2>
         </div>
         <div class="noticia-conteudo">
-            <div class="card-noticia">
+            <a href="matBordado.html" class="card-noticia">
+                <img src="imagens/bordado.jpg" alt="Imagem da notícia">
+                <p class="titulo-noticia">Bordado Contemporâneo: A Arte Têxtil que Conta Histórias</p>
+            </a>
+            
+            <a href="matModaArtesanal.html" class="card-noticia">
+                <img src="imagens/moda_artesanal.jpg" alt="Imagem da notícia">
+                <p class="titulo-noticia">Moda Artesanal: O Resgate do "Feito à Mão"</p>
+            </a>
+
+            <a href="matNovoTecido.html" class="card-noticia">
                 <img src="imagens/noticia.png" alt="Imagem da notícia">
                 <p class="titulo-noticia">Novo Tecido 100% Nacional Revoluciona a Indústria Têxtil</p>
-            </div>
+            </a>
+        </div>
+        <div class="footer-noticias">
+            <span>Ver mais</span>
+            <i class="fa-solid fa-arrow-down"></i>
         </div>
     </section>
+    <section id="contato">
+        <div class="titulo">
+            <h2>Contato</h2>
+        </div>
+        <div class="conteudo-contato">
+            <p>Entre em contato pelo WhatsApp para atendimento rápido ou preencha o formulário abaixo</p>
+            <a href="/"><img src="imagens/btn_whatsapp.png" alt=""></a>
+
+            <div class="campos">
+                <div class="campo">
+                    <label for="nome">Nome: </label>
+                    <input type="text" name="nome" id="nome">
+                </div>
+        
+                <div class="campo">
+                    <label for="email">E-mail: </label>
+                    <input type="email" name="email" id="email">
+                </div>
+        
+                <div class="campo">
+                    <label for="mensagem">Mensagem: </label>
+                    <textarea rows="5" name="mensagem" id="mensagem"></textarea>
+                </div>
+            </div>
+
+            <div class="btn_area">
+                <button class="btn_enviar">Enviar Mensagem</button>
+            </div>
+        </div>
+        
+    </section>
+
+    <footer>
+        <p>Essencia Artesanal ☺</p>
+      </footer>
 </body>
 </html>
