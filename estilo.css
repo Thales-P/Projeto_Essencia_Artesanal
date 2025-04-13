@@ -16,6 +16,10 @@ body {
   text-align: center;
 }
 
+a{
+  text-decoration: none;
+}
+
 .header h1 {
   font-size: 2.5rem;
   letter-spacing: 8px;
@@ -268,4 +272,94 @@ footer{
   background-color: #738d6d;
   padding: 40px 0 30px;
   text-align: center;
+}
+
+.login-link{
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  font-size: 1.4em;
+  transform: translateY(-50%);
+}
+
+.bag-link{
+  position: absolute;
+  right: 12%;
+  top: 50%;
+  font-size: 1.4em;
+  transform: translateY(-50%);
+}
+
+#banner{
+  background-image: url(imagens/banner.png);
+  background-size: cover;
+  height: 80vh;
+}
+
+#produtos{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.titulo{
+  height: 12em;
+  display: flex;
+  align-items: center;
+}
+
+#produtos h2{
+  color: #4B7F52;
+  font-weight:bold;
+  font-size: 48px;
+}
+
+#noticias{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+#noticias h2{
+  color: #4B7F52;
+  font-weight:bold;
+  font-size: 48px;
+}
+
+.produtos-conteudo{
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card{
+  width: 30%;
+  margin-bottom: 60px;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.card:hover {
+  transform: scale(1.05); 
+}
+
+.img-area{
+  width: 100%;
+  text-align: center;
+  background-color: #E8A87C;
+}
+
+.nome-produto{
+  color:#333;
+  font-size: large;
+  letter-spacing: 2px;
+}
+
+.preco {
+  color: #AEAEAE;
+  width: 40%;
+  font-size: small;
 }
