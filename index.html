@@ -124,38 +124,39 @@
             </div>
         </div>
     </section>
-    <section id="noticias">
-        <div class="titulo">
-            <h2>Noticias</h2>
-        </div>
-        <div class="noticia-conteudo">
-            <a href="matBordado.html" class="card-noticia">
-                <img src="imagens/bordado.jpg" alt="Imagem da notícia">
-                <p class="titulo-noticia">Bordado Contemporâneo: A Arte Têxtil que Conta Histórias</p>
-            </a>
-            
-            <a href="matModaArtesanal.html" class="card-noticia">
-                <img src="imagens/moda_artesanal.jpg" alt="Imagem da notícia">
-                <p class="titulo-noticia">Moda Artesanal: O Resgate do "Feito à Mão"</p>
-            </a>
+    <section id="noticias" class="veja-tambem">
+        <h2>Noticias</h2>
+        <div class="grid">
+          <article>
+            <img src="imagens/Rectangle 27.png" alt="Matéria 1" />
+            <h3> Novo Tecido 100% Nacional Revoluciona a Indústria Têxtil</h3>
+            <p>Pesquisadores brasileiros desenvolveram o "BioFlex", um tecido 100% nacional feito com algodão orgânico e bambu tratado.</p>
+            <a href="matNovoTecido.html">Leia mais</a>
+          </article>
+      
+          <article>
+            <img src="imagens/tingimento.jpg" alt="Matéria 2" />
+            <h3>Tingimento Natural: Cores que Respeitam o Meio Ambiente</h3>
+            <p>Técnicas ancestrais de tingimento com plantas e alimentos voltam com tudo na moda sustentável.</p>
+            <a href="matTingimento.html">Leia mais</a>
+          </article>
+          
+          <article>
+            <img src="imagens/bordado.jpg" alt="Matéria 2" />
+            <h3>Bordado Contemporâneo: A Arte Têxtil que Conta Histórias</h3>
+            <p>Mais do que enfeite, o bordado voltou à moda como forma de expressão artística e identidade cultural.</p>
+            <a href="matBordado.html">Leia mais</a>
+          </article>
 
-            <a href="matNovoTecido.html" class="card-noticia">
-                <img src="imagens/noticia.png" alt="Imagem da notícia">
-                <p class="titulo-noticia">Novo Tecido 100% Nacional Revoluciona a Indústria Têxtil</p>
-            </a>
         </div>
-        <div class="footer-noticias">
-            <span>Ver mais</span>
-            <i class="fa-solid fa-arrow-down"></i>
-        </div>
-    </section>
+      </section>
     <section id="contato">
         <div class="titulo">
             <h2>Contato</h2>
         </div>
         <div class="conteudo-contato">
             <p>Entre em contato pelo WhatsApp para atendimento rápido ou preencha o formulário abaixo</p>
-            <a href="/"><img src="imagens/btn_whatsapp.png" alt=""></a>
+            <a href="/"><img id="wpp" src="imagens/btn_whatsapp.png" alt=""></a>
 
             <div class="campos">
                 <div class="campo">
@@ -184,5 +185,49 @@
     <footer>
         <p>Essencia Artesanal ☺</p>
       </footer>
+
+      <button id="accessibility-toggle">♿</button>
+<div id="accessibility-toolbar">
+  <button id="inc-font" title="Aumentar fonte">A+</button>
+  <button id="dec-font" title="Diminuir fonte">A–</button>
+  <button id="toggle-grayscale" title="Ativar tons de cinza">🌫️</button>
+  <button id="toggle-contrast" title="Ativar alto contraste">🌗</button>
+</div>
 </body>
+
+<script>
+    (function() {
+    const toolbar = document.getElementById('accessibility-toolbar');
+    const toggleBtn = document.getElementById('accessibility-toggle');
+    const incBtn = document.getElementById('inc-font');
+    const decBtn = document.getElementById('dec-font');
+    const grayBtn = document.getElementById('toggle-grayscale');
+    const contrastBtn = document.getElementById('toggle-contrast');
+    let zoomLevel = 1;
+
+    toggleBtn.addEventListener('click', () => {
+      toolbar.style.display = (toolbar.style.display === 'none' || toolbar.style.display === '') ? 'flex' : 'none';
+    });
+
+    incBtn.addEventListener('click', () => {
+      zoomLevel = Math.min(zoomLevel + 0.1, 2);
+      document.body.style.zoom = zoomLevel;
+    });
+
+    decBtn.addEventListener('click', () => {
+      zoomLevel = Math.max(zoomLevel - 0.1, 0.5);
+      document.body.style.zoom = zoomLevel;
+    });
+
+    grayBtn.addEventListener('click', () => {
+      document.body.classList.toggle('grayscale');
+    });
+
+    contrastBtn.addEventListener('click', () => {
+      document.body.classList.toggle('high-contrast');
+      document.getElementById('contato').classList.toggle('high-contrast');
+    });
+  })();
+  </script>
+  
 </html>

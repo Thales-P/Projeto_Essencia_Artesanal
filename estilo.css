@@ -310,6 +310,7 @@ footer{
   height: 12em;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 #produtos h2{
@@ -318,18 +319,7 @@ footer{
   font-size: 48px;
 }
 
-#noticias{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 40px;
-}
 
-#noticias h2{
-  color: #4B7F52;
-  font-weight:bold;
-  font-size: 48px;
-}
 
 .produtos-conteudo{
   width: 95%;
@@ -341,6 +331,9 @@ footer{
 
 .card-produto{
   width: 30%;
+  min-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 60px;
   cursor: pointer;
   transition: transform 0.4s ease;
@@ -412,81 +405,176 @@ footer{
   cursor: pointer;
 }
 
-#contato{
-  margin: auto;
-  margin-bottom: 3em;
-  border-radius: 5px;
-  width: 95%;
-  background-color: #F0E5D8;
+/* Estilo da caixa de contato */
+  #contato {
+    background-color: #f5f5f5;
+    padding: 40px 20px;
+    border-top: 2px solid #ccc;
+    color: black;
+  }
+  #contato .conteudo-contato {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  #contato .campos .campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  #contato .campo label {
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  #contato input,
+  #contato textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  .btn_area {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .btn_enviar {
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .btn_enviar:hover {
+    background-color: #333;
+  }
+  #contato h2 {
+    text-align: center;
+    color: #6a9266;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  #contato .titulo{
+    height: auto;
+    padding-bottom: 40px;
+  }
+
+  #wpp{
+    width: 200px;
+    padding: 20px 0; 
+  }
+
+
+/* Botão fixo de acessibilidade */
+#accessibility-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 10000;
+  background: #000;
+  color: #fff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+
+/* Barra de acessibilidade oculta inicialmente */
+#accessibility-toolbar {
+  position: fixed;
+  top: 60px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 8px;
+  border-radius: 6px;
+  z-index: 9999;
+  display: none;
   flex-direction: column;
-  padding-bottom: 2em;
+  gap: 6px;
 }
 
-#contato h2{
-  color: #4B7F52;
-  font-weight:bold;
-  font-size: 48px;
-}
-
-.conteudo-contato{
-  width: 95%;
-  color: black;
-  display: flex;
-  flex-direction: column;
-  gap: 3em;
-}
-
-.conteudo-contato a{
-  width: 302px;
-}
-
-.conteudo-contato p{
-  font-size: 1.2em;
-  font-weight: 500;
-}
-
-.campos{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-}
-
-.campo{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  color: black;
-}
-
-.campo label{
-  font-weight: 500;
-}
-
-.campo input{
+#accessibility-toolbar button {
+  background: #fff !important;
+  color: #000 !important;
   border: none;
-  height: 2.2em;
-  padding: 0 1em ;
-  border-radius: 10px;
+  padding: 6px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
 }
 
-.campo textarea{
-  border: none;
-  padding: .2em 1em ;
-  border-radius: 10px;
-  resize: none;
+/* Filtros e modos */
+body.grayscale {
+  filter: grayscale(100%);
 }
 
-.btn_area{
-  display: flex;
-  justify-content: flex-end;
+/* Alto contraste global */
+body.high-contrast {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+body.high-contrast p,
+body.high-contrast h1,
+body.high-contrast h2,
+body.high-contrast h3,
+body.high-contrast h4,
+body.high-contrast h5,
+body.high-contrast h6,
+body.high-contrast a,
+body.high-contrast li,
+body.high-contrast td,
+body.high-contrast th {
+  color: #fff !important;
+}
+body.high-contrast img,
+body.high-contrast video {
+  opacity: 0.8;
 }
 
-.btn_enviar{
-  background-color: #758E67;
-  border-radius: 15px;
-  width: 12em;
+/* Alto contraste na área de contato */
+body.high-contrast #contato {
+  background-color: #111 !important;
+}
+body.high-contrast #contato .conteudo-contato {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+body.high-contrast #contato input,
+body.high-contrast #contato textarea {
+  background-color: #222 !important;
+  color: #fff !important;
+  border: 1px solid #555 !important;
+}
+
+ /* Alto contraste na seção 'veja também' */
+ body.high-contrast .veja-tambem article {
+  background-color: #111 !important;
+  color: #fff !important;
+  border: 1px solid #444;
+  padding: 20px;
+  border-radius: 8px;
+}
+/* Alto contraste na seção menu */
+#area_menu {
+  background-color: #fff; /* Cor padrão */
+}
+
+body.high-contrast #area_menu {
+  background-color: #000 !important;
+}
+
+/* Alterar a cor dos ícones no modo de alto contraste */
+body.high-contrast .fa-solid {
+  color: #fff !important;
 }
