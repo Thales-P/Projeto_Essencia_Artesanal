@@ -22,16 +22,18 @@
         <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="User Icon" />
       </div>
       <h2>Login</h2>
-      <form>
+      <form action="index.html">
         <label for="email">Email</label>
         <input type="email" id="email" placeholder="Digite seu email" required />
-
+    
         <label for="senha">Senha</label>
         <input type="password" id="senha" placeholder="Digite sua senha" required />
-
+    
         <a href="#" class="forgot-password">Esqueci minha senha</a>
-
+    
         <button type="submit">Entrar</button>
+    </form>
+    
       </form>
       <div class="extra-options">
         <a href="novaConta.html">Criar conta</a>
@@ -39,5 +41,48 @@
       </div>
     </div>
   </main>
-</body>
+  <button id="accessibility-toggle">♿</button>
+  <div id="accessibility-toolbar">
+    <button id="inc-font" title="Aumentar fonte">A+</button>
+    <button id="dec-font" title="Diminuir fonte">A–</button>
+    <button id="toggle-grayscale" title="Ativar tons de cinza"><img class="img-icon-acs" src="imagens/filter.webp"></button>
+    <button id="toggle-contrast" title="Ativar alto contraste"><img class="img-icon-acs" src="imagens/475980.png"> </button>
+  </div>
+  </body>
+  
+  <script>
+      (function() {
+      const toolbar = document.getElementById('accessibility-toolbar');
+      const toggleBtn = document.getElementById('accessibility-toggle');
+      const incBtn = document.getElementById('inc-font');
+      const decBtn = document.getElementById('dec-font');
+      const grayBtn = document.getElementById('toggle-grayscale');
+      const contrastBtn = document.getElementById('toggle-contrast');
+      let zoomLevel = 1;
+  
+      toggleBtn.addEventListener('click', () => {
+        toolbar.style.display = (toolbar.style.display === 'none' || toolbar.style.display === '') ? 'flex' : 'none';
+      });
+  
+      incBtn.addEventListener('click', () => {
+        zoomLevel = Math.min(zoomLevel + 0.1, 2);
+        document.body.style.zoom = zoomLevel;
+      });
+  
+      decBtn.addEventListener('click', () => {
+        zoomLevel = Math.max(zoomLevel - 0.1, 0.5);
+        document.body.style.zoom = zoomLevel;
+      });
+  
+      grayBtn.addEventListener('click', () => {
+        document.body.classList.toggle('grayscale');
+      });
+  
+      contrastBtn.addEventListener('click', () => {
+        document.body.classList.toggle('high-contrast');
+        document.getElementById('contato').classList.toggle('high-contrast');
+      });
+    })();
+    </script>
+    
 </html>

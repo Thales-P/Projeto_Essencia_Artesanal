@@ -578,3 +578,7 @@ body.high-contrast #area_menu {
 body.high-contrast .fa-solid {
   color: #fff !important;
 }
+
+.img-icon-acs{
+  height: 20px;
+}
